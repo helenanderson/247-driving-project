@@ -1,0 +1,17 @@
+body {
+	background-image: url("../images/marbles/perspective.jpg");
+	-webkit-background-size: cover;
+	background-repeat: no-repeat;
+}
+
+h1 {
+	color: white;
+	font-size: 10em;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 500;
+	position: absolute;
+	text-align: center;
+	width: 100%;
+	bottom: 0;
+}
+
