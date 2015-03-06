@@ -12,10 +12,15 @@
   </head>
 
   <body>
-    <svg height="1500" width="1000">
+    <!--<svg height="1500" width="1000">
         <circle id="circle" cx="350" cy="900" r="160" stroke="deepskyblue" stroke-width="25" fill="white" fill-opacity="0.3"></circle>
-        <text x="215" y="1000" stroke="deepskyblue" fill="deepskyblue" id="start" font-size="90px" id="start">START</text>
-    </svg>
+
+        <text x="215" y="1000" class="startstop" id="start">START</text>
+    </svg>-->
+    <canvas id="circlecanvas" width="1000" height="1500"></canvas>
+
+  
+
     <img class="bg" src="images/marbles/perspective.jpg" />
     
     <div id="title">
@@ -23,7 +28,14 @@
     </div>
     
     <script>
-      $("#start").click(function() {
+      var canvas = document.getElementById("circlecanvas");
+      var context = canvas.getContext("2d");
+      context.arc(350, 900, 160, 0, Math.PI * 2, false);
+      context.lineWidth = 25;
+      context.strokeStyle = "deepskyblue";
+      context.stroke();
+
+      $("#start, #circle").click(function() {
         if ($("#start").html() == "START") {
           $("#circle").css({"stroke": "orangered"});
           $("#start").css({"stroke": "orangered", "fill": "orangered"});

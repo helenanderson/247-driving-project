@@ -1,4 +1,5 @@
 
+
 h1 {
 	color: white;
 	font-size: 10em;
@@ -8,6 +9,14 @@ h1 {
 	text-align: center;
 	width: 100%;
 	bottom: 60px;
+}
+
+
+
+h2 {
+  font-size: 6em;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 800;
 }
 
 img.bg {
@@ -28,9 +37,18 @@ img.bg {
 }
 
 #start {
-	font-size: 6em;
-	font-family: 'Raleway', sans-serif;
-	font-weight: 800;
+  color: deepskyblue;
+}
+
+#stop {
+  color: orangered;
+}
+
+.startstop {
+  position: fixed;
+  font-size: 6em;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 800;
 }
 
 /*@media screen and (max-width: 1024px) {  Specific to this particular image 
