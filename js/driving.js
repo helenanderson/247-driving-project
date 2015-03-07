@@ -19,6 +19,8 @@ StartStop.prototype.drawCircle = function(color) {
     context.lineWidth = 25;
 	context.strokeStyle = color;
 	context.stroke();
+	context.fillStyle = 'rgba(225,225,225,0.5)';
+	context.fill();
 }
 
 StartStop.prototype.start = function() {
