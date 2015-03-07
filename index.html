@@ -16,10 +16,12 @@
     </svg>-->
 
     
-    <canvas id="circlecanvas" width="900" height="1500"></canvas>
+    
+    <div class="screen" id="screen"></div>
     <img class="bg" id="picture" src="images/marbles/perspective.jpg" />
     <h2 id="startstop" class="start">START</h2>
-
+    
+    <canvas id="circlecanvas"></canvas>
     
     <div id="title">
       <h1>DRIVEMIND</h1>
@@ -29,7 +31,7 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/driving.js"></script>
     <script>
-      var button = new StartStop("startstop", "circlecanvas", "picture");
+      var button = new StartStop("startstop", "circlecanvas", "screen");
       button.drawCircle("deepskyblue");
     </script>
 	
