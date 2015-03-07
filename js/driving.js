@@ -4,7 +4,7 @@ function StartStop(textid, circleid, screenid) {
 	this.transparency = document.getElementById(screenid);
 
 	var button = this;
-	$(this.text, this.circle).click(function() {
+	$(this.circle).add(this.text).click(function() {
 		if ($(button.text).attr("class") == "start") {
 			button.start();
 		} else {
@@ -39,37 +39,13 @@ StartStop.prototype.stop = function() {
 	this.stopAnimation();
 	$(this.text).html("START");
 	$(this.text).attr("class", "start");
-	this.drawCircle("deepskyblue");
-	
+	this.drawCircle("deepskyblue");	
 }
 
 StartStop.prototype.startAnimation = function() {
-	$(this.transparency).fadeIn(600);
-	//$(this.transparency).animate({"visibility": "visible"}, 1000);
-	//$(this.picture).attr("src", "images/marbles/blue.jpg").animate({opacity: 1},{duration: 3000});
-	
+	$(this.transparency).fadeIn(800);
 }
 
-// StartStop.prototype.requestAnimationFrame =  
-//         window.requestAnimationFrame ||
-//         window.webkitRequestAnimationFrame ||
-//         window.mozRequestAnimationFrame ||
-//         window.msRequestAnimationFrame ||
-//         window.oRequestAnimationFrame ||
-//         function(callback) {
-//           return setTimeout(callback, 1);
-//         };
-
-// StartStop.prototype.renderScreen = function() {
-// 	var context = this.circle.getContext("2d");
-// 	context.rect(0,0,context.canvas.width,context.canvas.height);
-// 	context.fillStyle = 'rgba(0,191,255,0.5)');
-// 	context.fill();
-
-// 	this.requestAnimationFrame(this.renderScreen);
-// }
-
 StartStop.prototype.stopAnimation = function() {
-	$(this.transparency).fadeOut(600);
-	//$(this.picture).attr("src", "images/marbles/perspective.jpg").animate({opacity: 1},{duration: 3000});
+	$(this.transparency).fadeOut(800);
 }
