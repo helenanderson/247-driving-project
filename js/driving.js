@@ -40,9 +40,9 @@ StartStop.prototype.stop = function() {
 }
 
 StartStop.prototype.startAnimation = function() {
-	$(this.background).attr("class", "screen");
+	$(this.background).attr("class", "bg screen");
 }
 
 StartStop.prototype.stopAnimation = function() {
-	$(this.background).attr("class", "noscreen");
+	$(this.background).attr("class", "bg noscreen");
 }

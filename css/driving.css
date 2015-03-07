@@ -18,7 +18,7 @@ h2 {
   text-align: center;
 }
 
-img.bg {
+.bg {
   /* Set rules to fill background */
   min-height: 100%;
   min-width: 1024px;
@@ -53,10 +53,11 @@ img.bg {
 
 .screen {
   background-color:rgba(0,191,255,0.5);
+  z-index: -888 !important;
 }
 
 .noscreen {
-
+  z-index: -888 !important;
 }
 
 
