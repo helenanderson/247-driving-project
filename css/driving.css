@@ -18,6 +18,10 @@ h2 {
   text-align: center;
 }
 
+#picture {
+  z-index: -999;
+}
+
 .bg {
   /* Set rules to fill background */
   min-height: 100%;
@@ -31,7 +35,7 @@ h2 {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: -999;
+  z-index: 0;
   overflow: hidden;
 }
 
@@ -51,14 +55,8 @@ h2 {
   left: 237px;
 }
 
-.screen {
-  background-color:rgba(0,191,255,0.5);
-  z-index: -888 !important;
-}
 
-.noscreen {
-  z-index: -888 !important;
-}
+
 
 
 

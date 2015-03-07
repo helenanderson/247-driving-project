@@ -14,8 +14,8 @@
 
         <text x="215" y="1000" class="startstop" id="start">START</text>
     </svg>-->
-    <div id="background" class="bg noscreen">
-      <img class="bg" src="images/marbles/perspective.jpg" />
+
+      <img class="bg" id="picture" src="images/marbles/perspective.jpg" />
       <canvas id="circlecanvas" width="1500" height="1500"></canvas>
 
       <h2 id="startstop" class="start">START</h2>
@@ -23,13 +23,13 @@
     
     <div id="title">
       <h1>DRIVEMIND</h1>
-    </div>
+   
 
     <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/driving.js"></script>
     <script>
-      var button = new StartStop("startstop", "circlecanvas", "background");
+      var button = new StartStop("startstop", "circlecanvas", "picture");
       button.drawCircle("deepskyblue");
     </script>
 	

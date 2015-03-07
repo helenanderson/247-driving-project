@@ -1,7 +1,7 @@
-function StartStop(textid, circleid, backgroundid) {
+function StartStop(textid, circleid, pictureid) {
 	this.text = document.getElementById(textid);
 	this.circle = document.getElementById(circleid);
-	this.background = document.getElementById(backgroundid);
+	this.picture = document.getElementById(pictureid);
 
 	var button = this;
 	$(this.text, this.circle).click(function() {
@@ -26,23 +26,25 @@ StartStop.prototype.drawCircle = function(color) {
 
 
 StartStop.prototype.start = function() {
+	this.startAnimation();
 	$(this.text).html("STOP");
 	$(this.text).attr("class", "stop");
 	this.drawCircle("orangered");
-	this.startAnimation();
+	
 }
 
 StartStop.prototype.stop = function() {
+	this.stopAnimation();
 	$(this.text).html("START");
 	$(this.text).attr("class", "start");
 	this.drawCircle("deepskyblue");
-	this.stopAnimation();
+	
 }
 
 StartStop.prototype.startAnimation = function() {
-	$(this.background).attr("class", "bg screen");
+	$(this.picture).attr("src", "images/marbles/blue.jpg");
 }
 
 StartStop.prototype.stopAnimation = function() {
-	$(this.background).attr("class", "bg noscreen");
+	$(this.picture).attr("src", "images/marbles/perspective.jpg");
 }
